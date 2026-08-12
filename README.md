@@ -2,7 +2,7 @@
 
 Portafolio personal y casos de estudio enfocados en **Ingeniería de Datos, Automatización (ETL) y Análisis de Operaciones**, desarrollado con un diseño moderno, limpio y completamente responsivo.
 
-🔗 **Sitio Web en Vivo:** [https://adanalfonso.github.io/Portafolio_Adan/](https://adanalfonso.github.io/Portafolio_Adan/) *(o tu URL final)*
+🔗 **Sitio Web en Vivo:** [https://adanalfonso.github.io/Portafolio_Adan/](https://adanalfonso.github.io/Portafolio_Adan/)
 
 ---
 
