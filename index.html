@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de Adan Josue Salinas Alfonso, Analista de Datos Jr.">
+    <meta name="author" content="Adan Josue Salinas Alfonso">
+    <title>Adan Josue Salinas Alfonso | Analista de Datos Jr.</title>
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+        NAVEGACIÓN
+    =========================================== -->
+    <header class="site-header">
+        <div class="container navbar">
+            
+            <a href="#" class="navbar__logo" aria-label="Inicio">AS</a>
+
+            <!-- Menú de navegación desktop y mobile -->
+            <nav class="navbar__nav" id="mobile-menu">
+                <ul class="navbar__links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botón Hamburguesa -->
+            <button class="navbar__toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ==========================================
+        01. INICIO
+        =========================================== -->
+
+        <section id="inicio" class="hero section-dark">
+
+            <div class="container hero__content">
+
+                <div class="hero__text">
+
+                    <span class="section-label">
+                        01 / INTRODUCCIÓN
+                    </span>
+
+                    <p class="hero__eyebrow">
+                        Analista de Datos Jr.
+                    </p>
+
+                    <h1>
+                        Adan Josue
+                        <span>Salinas Alfonso</span>
+                    </h1>
+
+                    <p class="hero__description">
+                        Transformo datos en información útil para 
+                        identificar patrones, comprender problemas 
+                        y respaldar decisiones.
+                    </p>
+
+                    <div class="hero__actions">
+
+                        <a href="#proyectos" class="button button--primary">
+                            Ver proyectos
+                        </a>
+
+                        <a href="#contacto" class="button button--secondary">
+                            Contactarme
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Elemento matemático decorativo -->
+                <div class="hero__visual">
+                    <svg
+                        class="gauss-chart"
+                        viewBox="0 0 720 360"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-label="Representación de una distribución normal"
+                        role="img"
+                    >
+                        <defs>
+                            <!-- Degradado suave para el área bajo la curva -->
+                            <linearGradient id="gaussAreaGrad" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#2A9D8F" stop-opacity="0.35" />
+                                <stop offset="100%" stop-color="#2A9D8F" stop-opacity="0.05" />
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Ejes X e Y -->
+                        <line class="gauss-axis" x1="60" y1="280" x2="680" y2="280" />
+                        <line class="gauss-axis" x1="60" y1="280" x2="60" y2="30" />
+
+                        <!-- Etiquetas de ejes -->
+                        <text class="gauss-axis-label" x="50" y="35" text-anchor="end">P(x)</text>
+                        <text class="gauss-axis-label" x="680" y="305" text-anchor="middle">x</text>
+
+                        <!-- Área sombreada del 68% (de μ-σ a μ+σ) coincidente con la curva -->
+                        <path
+                            class="gauss-area"
+                            d="
+                                M 250 280
+                                L 250 178
+                                C 285 105, 325 45, 360 45
+                                C 395 45, 435 105, 470 178
+                                L 470 280
+                                Z
+                            "
+                        />
+
+                        <!-- Curva normal completa -->
+                        <path
+                            class="gauss-curve"
+                            d="
+                                M 60 276
+                                C 140 276, 210 260, 250 178
+                                C 285 105, 325 45, 360 45
+                                C 395 45, 435 105, 470 178
+                                C 510 260, 580 276, 660 276
+                            "
+                        />
+
+                        <!-- Líneas punteadas de delimitación (μ - σ y μ + σ) -->
+                        <line class="gauss-deviation-line" x1="250" y1="178" x2="250" y2="280" />
+                        <line class="gauss-deviation-line" x1="470" y1="178" x2="470" y2="280" />
+
+                        <!-- Línea central de la media (μ) -->
+                        <line class="gauss-mean-line" x1="360" y1="45" x2="360" y2="280" />
+                        <circle class="gauss-mean-point" cx="360" cy="45" r="4.5" />
+
+                        <!-- Etiquetas estadísticas -->
+                        <text class="gauss-mean-label" x="360" y="28" text-anchor="middle">μ</text>
+                        <text class="gauss-deviation-label" x="250" y="305" text-anchor="middle">μ − σ</text>
+                        <text class="gauss-deviation-label" x="470" y="305" text-anchor="middle">μ + σ</text>
+
+                        <text class="gauss-probability" x="360" y="195" text-anchor="middle">≈ 68%</text>
+                        <text class="gauss-title" x="360" y="335" text-anchor="middle">DISTRIBUCIÓN NORMAL</text>
+                    </svg>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+        02. SOBRE MÍ
+        =========================================== -->
+        <section id="sobre-mi" class="about section-dark">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        02 / SOBRE MÍ
+                    </span>
+
+                    <h2>
+                        Datos antes que respuestas.
+                    </h2>
+
+                </div>
+
+
+                <div class="about__grid">
+
+                    <div class="about__text">
+
+                        <p>
+                            Soy Ingeniero en Sistemas Computacionales orientado al análisis 
+                            de datos, la optimización y la automatización de procesos.
+                        </p>
+
+                        <p>
+                            Mi enfoque parte del rigor metodológico: antes de buscar una respuesta, 
+                            es indispensable auditar, estructurar y comprender los datos disponibles.
+                        </p>
+
+                        <p>
+                            Utilizo herramientas como Python, SQL, Excel y Power BI para transformar 
+                            información en evidencia analítica clara y accionable.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about__principles">
+
+                        <article class="principle-card">
+
+                            <span class="principle-card__symbol">
+                                n
+                            </span>
+
+                            <h3>
+                                Observar
+                            </h3>
+
+                            <p>
+                                Auditar y estructurar los datos antes de cualquier interpretación.
+                            </p>
+
+                        </article>
+
+
+                        <article class="principle-card">
+
+                            <span class="principle-card__symbol">
+                                &Sigma;
+                            </span>
+
+                            <h3>
+                                Analizar
+                            </h3>
+
+                            <p>
+                                Explorar relaciones, patrones y distribuciones clave en el conjunto.
+                            </p>
+
+                        </article>
+
+
+                        <article class="principle-card">
+
+                            <span class="principle-card__symbol">
+                                &sigma;
+                            </span>
+
+                            <h3>
+                                Interpretar
+                            </h3>
+
+                            <p>
+                                Traducir métricas y comportamientos estadísticos en contexto útil.
+                            </p>
+
+                        </article>
+
+
+                        <article class="principle-card">
+
+                            <span class="principle-card__symbol">
+                                &#8756;
+                            </span>
+
+                            <h3>
+                                Decidir
+                            </h3>
+
+                            <p>
+                                Respaldar conclusiones y soluciones basadas estrictamente en evidencia.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+        03. HABILIDADES
+        =========================================== -->
+        <section id="habilidades" class="skills section-dark">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        03 / HABILIDADES
+                    </span>
+
+                    <h2>
+                        Herramientas para analizar.
+                    </h2>
+
+                </div>
+
+
+                <div class="skills__grid">
+
+                    <!-- Python -->
+                    <article class="skill-card">
+
+                        <span class="skill-card__number">
+                            01
+                        </span>
+
+                        <div class="skill-card__icon">
+                            Py
+                        </div>
+
+                        <h3>
+                            Python
+                        </h3>
+
+                        <p>
+                            Limpieza, manipulación, análisis exploratorio 
+                            y automatización de flujos.
+                        </p>
+
+                        <ul class="skill-card__tools">
+
+                            <li>Pandas</li>
+                            <li>NumPy</li>
+                            <li>OpenPyXL</li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <!-- SQL -->
+                    <article class="skill-card">
+
+                        <span class="skill-card__number">
+                            02
+                        </span>
+
+                        <div class="skill-card__icon">
+                            SQL
+                        </div>
+
+                        <h3>
+                            SQL
+                        </h3>
+
+                        <p>
+                            Extracción, cruce de fuentes y transformaciones 
+                            para consultas analíticas.
+                        </p>
+
+                        <ul class="skill-card__tools">
+
+                            <li>Joins & Subconsultas</li>
+                            <li>Agregaciones & CTEs</li>
+                            <li>Filtrado avanzado</li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <!-- Power BI -->
+                    <article class="skill-card">
+
+                        <span class="skill-card__number">
+                            03
+                        </span>
+
+                        <div class="skill-card__icon">
+                            BI
+                        </div>
+
+                        <h3>
+                            Power BI
+                        </h3>
+
+                        <p>
+                            Modelado de datos relacional y diseño 
+                            de tableros interactivos con KPIs.
+                        </p>
+
+                        <ul class="skill-card__tools">
+
+                            <li>Modelado de datos</li>
+                            <li>Métricas DAX</li>
+                            <li>Dashboards & KPIs</li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <!-- Excel -->
+                    <article class="skill-card">
+
+                        <span class="skill-card__number">
+                            04
+                        </span>
+
+                        <div class="skill-card__icon">
+                            XLS
+                        </div>
+
+                        <h3>
+                            Excel
+                        </h3>
+
+                        <p>
+                            Auditoría rápida de datos, preparación 
+                            estructurada y resúmenes ejecutivos.
+                        </p>
+
+                        <ul class="skill-card__tools">
+
+                            <li>Power Query</li>
+                            <li>Tablas dinámicas</li>
+                            <li>Funciones avanzadas</li>
+
+                        </ul>
+
+                    </article>
+
+                </div>
+
+
+                <!-- Lenguaje estadístico -->
+                <div class="statistics-strip">
+
+                    <div>
+                        <span>n</span>
+                        <small>Muestra</small>
+                    </div>
+
+                    <div>
+                        <span>μ</span>
+                        <small>Media</small>
+                    </div>
+
+                    <div>
+                        <span>σ</span>
+                        <small>Desviación</small>
+                    </div>
+
+                    <div>
+                        <span>r</span>
+                        <small>Correlación</small>
+                    </div>
+
+                    <div>
+                        <span>P</span>
+                        <small>Probabilidad</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================================
+        DIVISOR DE IMPACTO (Reemplazo del div vacío)
+        =========================================== -->
+        <div class="impact-divider">
+            <div class="container">
+                <div class="impact-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">+10</span>
+                        <p>Proyectos Analíticos</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <p>Fuentes de Datos</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">200k+</span>
+                        <p>Registros Procesados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ==========================================
+        04. PROYECTOS
+        =========================================== -->
+        <section id="proyectos" class="projects section-dark">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        04 / PROYECTOS
+                    </span>
+
+                    <h2>
+                        De los datos a los resultados.
+                    </h2>
+
+                    <p>
+                        Una selección de proyectos donde cada análisis
+                        comienza con una pregunta y termina con evidencia.
+                    </p>
+
+                </div>
+
+
+                <div class="projects__grid">
+
+                    <!-- Proyecto 01 -->
+                    <article class="project-card">
+
+                        <div class="project-card__header">
+                            <span class="project-card__number">01</span>
+                            <span class="project-card__type">AUTOMATIZACIÓN</span>
+                        </div>
+
+                        <div class="project-card__content">
+                            <h3>
+                                Automatización
+                                de Documentos/Reportes
+                            </h3>
+                            <p>
+                                Automatización de procesos de
+                                generación de documentos y reportes
+                                utilizando Python.
+                            </p>
+                        </div>
+
+                        <div class="project-card__footer">
+                            <ul class="project-card__tags">
+                                <li>Python</li>
+                                <li>Excel</li>
+                                <li>Word</li>
+                            </ul>
+
+                            <a
+                                href="pages/proyecto_automatizacion.html"
+                                class="project-card__link"
+                                aria-label="Ver proyecto de automatización"
+                            >
+                                →
+                            </a>
+                        </div>
+
+                    </article>
+
+                    <!-- Proyecto 01 -->
+
+
+                    <!-- Proyecto 02 -->
+                    <article class="project-card">
+
+                        <div class="project-card__header">
+                            <span class="project-card__number">02</span>
+                            <span class="project-card__type" style="color: #f3c653;">ANALISIS DE DATOS (En anonimización)</span>
+                        </div>
+
+                        <div class="project-card__content">
+                            <h3>
+                                Mediciones de Gas Natural
+                            </h3>
+                            <p>
+                                Análisis de consumo de gas natural
+                                para identificar comportamientos
+                                irregulares y anomalías.
+                            </p>
+                        </div>
+
+                        <div class="project-card__footer">
+                            <ul class="project-card__tags">
+                                <li>Python</li>
+                                <li>Pandas</li>
+                                <li>Excel</li>
+                            </ul>
+
+                            <a
+                                href="pages/proyecto_medgas.html"
+                                class="project-card__link"
+                                aria-label="Ver proyecto Medicion de Gas Natural"
+                            >
+                                →
+                            </a>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Proyecto 03 -->
+                    <article class="project-card">
+
+                        <div class="project-card__header">
+                            <span class="project-card__number">03</span>
+                            <span class="project-card__type" style="color: #f3c653;">ANALISIS DE DATOS (En anonimización)</span>
+                        </div>
+
+                            <div class="project-card__content">
+                            <h3>
+                                Análisis de Incidentes y Métricas de Soporte TI
+                            </h3>
+                            <p>
+                                Modelo analítico desarrollado para procesar registros de tickets de soporte técnico, identificando cuellos de botella operativos, tiempos de resolución y patrones de fallas mediante Python y Power BI.
+                            </p>
+                        </div>
+
+                        <div class="project-card__footer">
+                            <ul class="project-card__tags">
+                                <li>Python</li>
+                                <li>Pandas</li>
+                                <li>Excel</li>
+                                <li>Power BI</li>
+                            </ul>
+
+                            <a
+                                href="pages/proyecto_soporte_ti.html"
+                                class="project-card__link"
+                                aria-label="Ver proyecto Soporte TI"
+                            >
+                                →
+                            </a>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================================
+        05. CONTACTO
+        =========================================== -->
+        <section id="contacto" class="contact section-dark">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        05 / CONTACTO
+                    </span>
+
+                    <h2>
+                        ¿Hablamos de datos?
+                    </h2>
+
+                    <p>
+                        Si tienes una vacante, un proyecto o una colaboración 
+                        en mente, mi bandeja de entrada está abierta.
+                    </p>
+
+                </div>
+
+
+                <div class="contact__grid">
+
+                    <!-- Información de contacto directa -->
+                    <div class="contact__info">
+
+                        <h3>Iniciemos una conversación</h3>
+                        
+                        <p>
+                            Actualmente me encuentro en búsqueda de oportunidades profesionales 
+                            como analista de datos. Con gusto respondo mensajes por cualquier vía.
+                        </p>
+
+                        <div class="contact__details">
+
+                            <div class="contact__item">
+                                <span class="contact__item-label">Correo</span>
+                                <a href="mailto:contacto@example.com">salinasadan0704@gmail.com</a>
+                            </div>
+
+                            <div class="contact__item">
+                                <span class="contact__item-label">Ubicación</span>
+                                <span>Veracruz, México (Disponible para cambio de residencia)</span>
+                            </div>
+
+                            <!-- Redes Sociales / Contacto Directo con Iconos SVG -->
+                            <div class="social-links-container">
+                                <!-- GitHub -->
+                                <a href="https://github.com/AdanAlfonso" target="_blank" rel="noopener" class="social-icon-link" aria-label="GitHub">
+                                    <svg class="social-svg" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    <span>GitHub</span>
+                                </a>
+
+                                <!-- LinkedIn -->
+                                <a href="https://www.linkedin.com/in/adan-alfonso/" target="_blank" rel="noopener" class="social-icon-link" aria-label="LinkedIn">
+                                    <svg class="social-svg" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                        <rect x="2" y="9" width="4" height="12"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg>
+                                    <span>LinkedIn</span>
+                                </a>
+
+                                <!-- WhatsApp -->
+                                <a href="https://wa.me/5219221220672?text=Hola%20Adan,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte." target="_blank" rel="noopener" class="social-icon-link social-whatsapp" aria-label="WhatsApp">
+                                    <svg class="social-svg" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                                    </svg>
+                                    <span>WhatsApp</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Formulario de contacto -->
+                    <form class="contact__form" action="#" method="POST">
+
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre o empresa" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            Enviar mensaje
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+    FOOTER
+    =========================================== -->
+    <footer class="site-footer">
+
+        <div class="container footer__container">
+
+            <div class="footer__left">
+                <p>&copy; 2026 Adan Josue Salinas Alfonso.</p>
+            </div>
+
+            <div class="footer__right">
+                <ul class="footer__socials">
+                    <li><a href="https://github.com/AdanAlfonso" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/adan-alfonso/" target="_blank" rel="noopener">LinkedIn</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/menu.js"></script>
+
+</body>
+
+</html>

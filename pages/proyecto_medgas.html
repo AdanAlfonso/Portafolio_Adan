@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediciones de Gas Natural | Portafolio de Adan Salinas</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/proyecto_automatizacion.css">
+</head>
+<body class="project-detail-page">
+
+    <!-- Header / Navegación interna -->
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="../index.html" class="navbar__logo" aria-label="Inicio">AS</a>
+            <a href="../index.html#proyectos" class="back-link">← Volver a proyectos</a>
+        </div>
+    </header>
+
+    <main class="project-main">
+        <div class="container">
+
+            <!-- 1. Nombre del proyecto y Metadatos -->
+            <header class="project-header">
+                <span class="section-label">02 / CASO DE ESTUDIO</span>
+                <h1>Análisis de Mediciones y Consumo de Gas Natural</h1>
+                <p class="project-subtitle">
+                    Desarrollo de herramientas analíticas para la detección de irregularidades y análisis de consumo 
+                    a partir de registros horarios y diarios de mantenimiento industrial.
+                </p>
+
+                <div class="project-meta">
+                    <div class="meta-group">
+                        <span class="meta-label">Tecnologías:</span>
+                        <ul class="tag-list">
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>Excel / Time-Series</li>
+                            <li>Data Quality</li>
+                        </ul>
+                    </div>
+                    <div class="meta-group">
+                        <span class="meta-label">Estado:</span>
+                        <span class="repo-link" style="color: #f3c653;">En desarrollo / Blindaje de datos</span>
+                    </div>
+                </div>
+
+                <!-- Banner de Proyecto en Desarrollo / Datos Sensibles -->
+                <div class="etl-objective-banner" style="margin-top: var(--space-xl); background-color: rgba(42, 157, 143, 0.05); border-color: rgba(42, 157, 143, 0.3);">
+                    <span class="objective-icon">🔒</span>
+                    <p><strong>NOTA TÉCNICA:</strong> Este proyecto procesa registros operativos reales. Actualmente estamos trabajando en los módulos de anonimización y pruebas de estrés para proteger la confidencialidad de la información antes de liberar el repositorio público.</p>
+                </div>
+            </header>
+
+            <!-- Separador visual -->
+            <hr class="project-divider">
+
+            <!-- Contenido del caso de estudio -->
+            <div class="project-content">
+
+                <!-- 2. Problemática -->
+                <section class="project-section">
+                    <h2>01. Problemática</h2>
+                    <p>
+                        Los equipos de mantenimiento industrial manejan volúmenes masivos de registros horarios y diarios en Excel 
+                        para el seguimiento de energéticos. La detección manual de anomalías o picos de consumo atípicos suele ser 
+                        lenta y propensa a pasar por alto patrones ocultos en las series temporales.
+                    </p>
+                    <div class="highlight-box">
+                        <p><strong>El reto principal:</strong> Automatizar la lectura y el análisis estadístico de series de tiempo operativas para identificar desviaciones y comportamientos anómalos de manera oportuna.</p>
+                    </div>
+                </section>
+
+                <!-- 3. Enfoque y Arquitectura Propuesta -->
+                <section class="project-section">
+                    <h2>02. Enfoque Metodológico</h2>
+                    <p>
+                        Se diseñó una estructura modular orientada al procesamiento de datos industriales mediante scripts especializados 
+                        en limpieza, validación de esquemas y análisis de tendencias temporales.
+                    </p>
+                    <ul class="solution-list">
+                        <li><strong>Procesamiento de Series Temporales:</strong> Normalización de marcas de tiempo y manejo de frecuencias horarias y diarias en Pandas.</li>
+                        <li><strong>Detección de Irregularidades:</strong> Algoritmos de umbrales dinámicos para el aislamiento de picos de consumo atípicos.</li>
+                        <li><strong>Arquitectura Modular:</strong> Separación entre la ingesta de datos, los motores de cálculo analítico y los generadores de reportes ejecutivos.</li>
+                    </ul>
+
+                    <!-- Estructura técnica proyectada -->
+                    <div class="directory-tree-wrapper">
+                        <div class="code-header">
+                            <span>Estructura del Módulo Analítico (En desarrollo)</span>
+                            <span class="code-lang">Architecture</span>
+                        </div>
+                        <pre class="directory-tree"><code>medgas-analitica/
+│
+├── <span class="folder">src/</span>
+│   ├── <span class="file">ingest.py</span>         <span class="comment"># Limpieza y normalización de registros Excel</span>
+│   ├── <span class="file">analytics.py</span>      <span class="comment"># Modelos de detección de anomalías</span>
+│   └── <span class="file">reports.py</span>        <span class="comment"># Consolidación de métricas para mantenimiento</span>
+│
+├── <span class="folder">data/</span>                 <span class="comment"># Registros operativos (Protegidos por anonimización)</span>
+└── <span class="file">main.py</span>               <span class="comment"># Orquestador del pipeline de análisis</span></code></pre>
+                    </div>
+                </section>
+
+                <!-- 4. Próximos Entregables -->
+                <section class="project-section">
+                    <h2>03. Próximos Entregables y Resultados Esperados</h2>
+                    <p>
+                        Con la finalización de este desarrollo, el sistema proveerá tableros de diagnóstico automatizados y reportes 
+                        de excepciones para agilizar las decisiones del área operativa.
+                    </p>
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <span class="result-metric">Automático</span>
+                            <p>Procesamiento de reportes horarios y diarios</p>
+                        </div>
+                        <div class="result-card">
+                            <span class="result-metric">Preciso</span>
+                            <p>Aislamiento de anomalías de consumo</p>
+                        </div>
+                        <div class="result-card">
+                            <span class="result-metric">Seguro</span>
+                            <p>Cumplimiento estricto de privacidad industrial</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- CTA de Cierre -->
+            <section class="project-footer-cta">
+                <div class="cta-badge">¿CONVERSEMOS?</div>
+                <h3>¿Te interesa conocer más sobre este desarrollo analítico?</h3>
+                <p>Hablemos sobre cómo aplicar ingeniería de datos y análisis de series temporales en tus proyectos.</p>
+                <div class="cta-actions">
+                    <a href="../index.html#contacto" class="btn btn-primary">Contactar conmigo →</a>
+                    <a href="../index.html#proyectos" class="btn btn-secondary">Ver otros proyectos</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer__container">
+            <div class="footer__left">
+                <p>&copy; 2026 Adan Josue Salinas Alfonso.</p>
+            </div>
+            <div class="footer__right">
+                <ul class="footer__socials">
+                    <li><a href="https://github.com/AdanAlfonso" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/adan-alfonso/" target="_blank" rel="noopener">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

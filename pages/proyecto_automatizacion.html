@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatización de Reportes | Portafolio de Adan Salinas</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/proyecto_automatizacion.css">
+</head>
+<body class="project-detail-page">
+
+    <!-- Header / Navegación interna -->
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="../index.html" class="navbar__logo" aria-label="Inicio">AS</a>
+            <a href="../index.html#proyectos" class="back-link">← Volver a proyectos</a>
+        </div>
+    </header>
+
+    <main class="project-main">
+        <div class="container">
+
+            <!-- 1. Nombre del proyecto y Metadatos -->
+            <header class="project-header">
+                <span class="section-label">01 / CASO DE ESTUDIO</span>
+                <h1>Automatización de Documentos/Reportes con Python</h1>
+                <p class="project-subtitle">
+                    Desarrollo de herramientas de automatización (ETL) para optimizar la generación de documentos, 
+                    minimizar errores humanos y agilizar flujos de trabajo administrativos.
+                </p>
+
+                <div class="project-meta">
+                    <div class="meta-group">
+                        <span class="meta-label">Tecnologías:</span>
+                        <ul class="tag-list">
+                            <li>Python</li>
+                            <li>Excel</li>
+                            <li>Word/PDF</li>
+                            <li>Git / Unit Testing</li>
+                        </ul>
+                    </div>
+                    <div class="meta-group">
+                        <span class="meta-label">Repositorio:</span>
+                        <a href="https://github.com/AdanAlfonso/Automatizacion-Etl-Python.git" target="_blank" rel="noopener" class="repo-link">Ver en GitHub →</a>
+                    </div>
+                </div>
+
+                <!-- Diagrama de Flujo ETL Visual -->
+                <section class="etl-flow-section">
+                    <h2>Flujo de Trabajo ETL</h2>
+                    <p class="etl-intro">Extracción, procesamiento y generación automatizada de documentos.</p>
+
+                    <div class="etl-container">
+                        <!-- Paso 1: Extracción -->
+                        <div class="etl-card">
+                            <div class="etl-step-header">
+                                <span class="etl-badge">1</span>
+                                <h3>Extracción</h3>
+                            </div>
+                            <p class="etl-step-desc">Datos de Entrada</p>
+                            <div class="etl-icon-box">
+                                <span class="file-badge excel">XLSX</span>
+                                <span class="etl-label-sub">Archivo Excel (.xlsx)</span>
+                            </div>
+                            <ul class="etl-list">
+                                <li>Lectura del archivo Excel</li>
+                                <li>Validación de estructura</li>
+                                <li>Carga de datos en memoria</li>
+                            </ul>
+                        </div>
+
+                        <!-- Flecha de conexión -->
+                        <div class="etl-arrow">→</div>
+
+                        <!-- Paso 2: Procesamiento -->
+                        <div class="etl-card etl-highlight">
+                            <div class="etl-step-header">
+                                <span class="etl-badge">2</span>
+                                <h3>Procesamiento</h3>
+                            </div>
+                            <p class="etl-step-desc">Transformación con Python</p>
+                            <div class="etl-icon-box">
+                                <span class="py-logo">🐍 Python</span>
+                            </div>
+                            <ul class="etl-list">
+                                <li>Validación de datos</li>
+                                <li>Transformación y limpieza</li>
+                                <li>Preparación de la información</li>
+                            </ul>
+                        </div>
+
+                        <!-- Flecha de conexión -->
+                        <div class="etl-arrow">→</div>
+
+                        <!-- Paso 3: Salidas -->
+                        <div class="etl-card">
+                            <div class="etl-step-header">
+                                <span class="etl-badge">3</span>
+                                <h3>Salidas</h3>
+                            </div>
+                            <p class="etl-step-desc">Documentos Generados</p>
+                            <div class="etl-icon-box">
+                                <span class="file-badge word">DOCX</span>
+                                <span class="file-badge pdf">PDF</span>
+                            </div>
+                            <ul class="etl-list">
+                                <li>Generación de documentos Word</li>
+                                <li>Conversión automática a PDF</li>
+                                <li>Almacenamiento en carpeta de salida</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Banner de Objetivo -->
+                    <div class="etl-objective-banner">
+                        <span class="objective-icon">🎯</span>
+                        <p><strong>OBJETIVO:</strong> Automatizar la generación masiva de documentos a partir de datos en Excel de forma rápida, precisa y eficiente.</p>
+                    </div>
+                </section>
+            </header>
+
+            <!-- Separador visual -->
+            <hr class="project-divider">
+
+            <!-- Contenido del caso de estudio -->
+            <div class="project-content">
+
+                <!-- 2. Problemática -->
+                <section class="project-section">
+                    <h2>01. Problemática</h2>
+                    <p>
+                        Los procesos manuales repetitivos en la generación de reportes y conversión de formatos 
+                        (como procesar información de hojas de cálculo hacia documentos ejecutivos) suelen ser propensos 
+                        a errores humanos, además de consumir valiosas horas-hombre que podrían invertirse en análisis de mayor valor.
+                    </p>
+                    <div class="highlight-box">
+                        <p><strong>El reto principal:</strong> Diseñar un flujo automatizado y reutilizable capaz de procesar estructuras de datos estandarizadas y generar entregables limpios sin intervención manual constante.</p>
+                    </div>
+                </section>
+
+                <!-- 3. Solución Propuesta -->
+                <section class="project-section">
+                    <h2>02. Solución Propuesta</h2>
+                    <p>
+                        Se ideó una arquitectura basada en scripts modulares en Python encargados de leer datos tabulares, 
+                        aplicar validaciones estrictas mediante pruebas unitarias y automatizar la exportación de documentos formateados.
+                    </p>
+                    <ul class="solution-list">
+                        <li><strong>Modularidad:</strong> Separación de responsabilidades entre validadores, motores de lectura y constructores de salida.</li>
+                        <li><strong>Pruebas Unitarias:</strong> Implementación de validaciones automáticas para garantizar la integridad de los datos procesados.</li>
+                        <li><strong>Estandarización:</strong> Plantillas predefinidas que aseguran consistencia visual y de contenido en cada reporte generado.</li>
+                    </ul>
+                    <!-- Visualización del Árbol de Directorios -->
+                    <div class="directory-tree-wrapper">
+                        <div class="code-header">
+                            <span>Estructura del Proyecto</span>
+                            <span class="code-lang">Architecture</span>
+                        </div>
+                        <pre class="directory-tree"><code>automatizacion-reportes/
+│
+├── <span class="folder">src/</span>                      <span class="comment"># Código fuente modular</span>
+│   ├── <span class="file">__init__.py</span>
+│   ├── <span class="file">reader_excel.py</span>       <span class="comment"># Lector de excel con validaciones</span>
+│   ├── <span class="file">validators.py</span>         <span class="comment"># Módulo de validación de datos (Pandas)</span>
+│   └── <span class="file">transformer.py</span>        <span class="comment"># Construye el diccionario de datos</span>
+│
+├── <span class="folder">tests/</span>                    <span class="comment"># Control de calidad y pruebas</span>
+│   ├── <span class="file">test_validators.py</span>    <span class="comment"># Pruebas unitarias para validación</span>
+│   └── <span class="file">test_transformer.py</span>   <span class="comment"># Pruebas para validar transformacion de datos</span>
+│
+├── <span class="file">main.py</span>                   <span class="comment"># Orquestador principal del proceso</span>
+├── <span class="file">requirements.txt</span>          <span class="comment"># Dependencias del entorno</span>
+└── <span class="file">README.md</span>                 <span class="comment"># Documentación técnica</span></code></pre>
+                    </div>
+                </section>
+
+                <!-- 4. Implementación y Control de Calidad -->
+                <section class="project-section">
+                    <h2>03. Implementación y Control de Calidad (Data Quality)</h2>
+                    <p>
+                        Para garantizar la integridad de los datos de entrada, se desarrolló un motor de validación 
+                        vectorizado en Pandas. Este script no solo detecta columnas faltantes y valores nulos, sino que 
+                        mapea los errores directamente a las filas reales del archivo de Excel para facilitar la depuración.
+                    </p>
+
+                    <!-- Bloque de Código Clave -->
+                    <div class="code-block-wrapper">
+                        <div class="code-header">
+                            <span>src/validators.py (Validación Vectorizada)</span>
+                            <span class="code-lang">Python</span>
+                        </div>
+                        <pre><code># Validación vectorizada de calidad de datos en Pandas
+for col, tipo_esperado in reglas_dinamicas.items():
+    # 1. Detección de nulos mapeada a la fila real de Excel (idx + 2)
+    mask_nulos = df[col].isna()
+    if mask_nulos.any():
+        filas_nulas = (df[mask_nulos].index + 2).tolist()
+        reporte_nulos[col] = filas_nulas
+
+    # 2. Validación y coerción de tipos sin bucles lentos
+    serie_sin_nulos = df[col].dropna()
+    if tipo_esperado == "numeric":
+        numeros_coercionados = pd.to_numeric(serie_sin_nulos, errors='coerce')
+        invalidos = serie_sin_nulos[numeros_coercionados.isna()]</code></pre>
+                    </div>
+
+                    <p style="margin-top: var(--space-lg);">
+                        Como resultado de este procesamiento, el pipeline clasifica los registros y emite excepciones controladas 
+                        o bitácoras claras cuando detecta anomalías en el archivo origen:
+                    </p>
+
+                    <!-- Tabla Analítica -->
+                    <div class="data-preview-wrapper">
+                        <div class="code-header">
+                            <span>Reporte de Auditoría y Validación de Datos (DataFrame Output)</span>
+                            <span class="code-lang">Pandas / Data Quality</span>
+                        </div>
+                        <div class="table-container">
+                            <table class="analytics-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID_Reporte</th>
+                                        <th>Fecha (Excel)</th>
+                                        <th>Métrica / Valor</th>
+                                        <th>Estado de Calidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>REP-401</code></td>
+                                        <td>2026-08-01</td>
+                                        <td class="metric-val">$45,200.00</td>
+                                        <td><span class="badge-status success">VALIDADO</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>REP-402</code></td>
+                                        <td>2026-08-02</td>
+                                        <td class="metric-val">$18,550.50</td>
+                                        <td><span class="badge-status success">VALIDADO</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>REP-403</code></td>
+                                        <td class="text-muted"><em>Nulo (Fila 5)</em></td>
+                                        <td class="metric-error">NaN</td>
+                                        <td><span class="badge-status error">INVÁLIDO (Error Nulo)</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. Resultados -->
+                <section class="project-section">
+                    <h2>04. Resultados e Impacto</h2>
+                    <p>
+                        La implementación de este script redujo drásticamente el tiempo de ejecución de tareas repetitivas, 
+                        eliminando por completo los errores de transcripción manual.
+                    </p>
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <span class="result-metric">100%</span>
+                            <p>Eliminación de errores de formato manual</p>
+                        </div>
+                        <div class="result-card">
+                            <span class="result-metric">Minutos</span>
+                            <p>En lugar de horas de procesamiento manual</p>
+                        </div>
+                        <div class="result-card">
+                            <span class="result-metric">Modular</span>
+                            <p>Fácilmente adaptable a nuevos tipos de plantillas</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- CTA de Cierre Mejorado -->
+            <section class="project-footer-cta">
+                <div class="cta-badge">¿CONVERSEMOS?</div>
+                <h3>¿Te interesa llevar este nivel de automatización a tu equipo?</h3>
+                <p>Estoy listo para aportar valor analítico y técnico en proyectos de datos. ¡Hablemos!</p>
+                <div class="cta-actions">
+                    <a href="../index.html#contacto" class="btn btn-primary">Contactar conmigo →</a>
+                    <a href="https://github.com/AdanAlfonso" target="_blank" rel="noopener" class="btn btn-secondary">Ver más en GitHub</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer__container">
+            <div class="footer__left">
+                <p>&copy; 2026 Adan Josue Salinas Alfonso.</p>
+            </div>
+            <div class="footer__right">
+                <ul class="footer__socials">
+                    <li><a href="https://github.com/AdanAlfonso" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/adan-alfonso/" target="_blank" rel="noopener">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

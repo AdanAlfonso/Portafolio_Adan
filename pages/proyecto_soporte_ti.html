@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Incidentes TI | Portafolio de Adan Salinas</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/proyecto_automatizacion.css">
+</head>
+<body class="project-detail-page">
+
+    <!-- Header / Navegación interna -->
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="../index.html" class="navbar__logo" aria-label="Inicio">AS</a>
+            <a href="../index.html#proyectos" class="back-link">← Volver a proyectos</a>
+        </div>
+    </header>
+
+    <main class="project-main">
+        <div class="container">
+
+            <!-- 1. Nombre del proyecto y Metadatos -->
+            <header class="project-header">
+                <span class="section-label">03 / CASO DE ESTUDIO</span>
+                <h1>Análisis de Incidentes y Métricas de Soporte TI</h1>
+                <p class="project-subtitle">
+                    Optimización y análisis de volumen de tickets operativos mediante pipelines en Python 
+                    y tableros dinámicos en Power BI para la toma de decisiones gerenciales.
+                </p>
+
+                <div class="project-meta">
+                    <div class="meta-group">
+                        <span class="meta-label">Tecnologías:</span>
+                        <ul class="tag-list">
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>Excel (Time-Series)</li>
+                            <li>Power BI</li>
+                        </ul>
+                    </div>
+                    <div class="meta-group">
+                        <span class="meta-label">Estado:</span>
+                        <span class="repo-link" style="color: #f3c653;">En proceso de anonimización</span>
+                    </div>
+                </div>
+
+                <!-- Banner de Proyecto en Desarrollo / Datos Sensibles -->
+                <div class="etl-objective-banner" style="margin-top: var(--space-xl); background-color: rgba(42, 157, 143, 0.05); border-color: rgba(42, 157, 143, 0.3);">
+                    <span class="objective-icon">🔒</span>
+                    <p><strong>NOTA TÉCNICA:</strong> Este proyecto se basa en datos operativos reales de soporte técnico. Actualmente nos encontramos aplicando rutinas de anonimización y enmascaramiento de información sensible antes de liberar la documentación completa.</p>
+                </div>
+            </header>
+
+            <!-- Separador visual -->
+            <hr class="project-divider">
+
+            <!-- Contenido del caso de estudio -->
+            <div class="project-content">
+
+                <!-- 2. Problemática -->
+                <section class="project-section">
+                    <h2>01. Problemática</h2>
+                    <p>
+                        La gestión de soporte técnico en entornos corporativos genera grandes volúmenes de registros diarios en hojas de cálculo. 
+                        Sin un procesamiento automatizado, identificar las categorías de incidentes más recurrentes, los tiempos muertos de resolución 
+                        y la carga operativa por departamento se vuelve complejo y limita la eficiencia del equipo.
+                    </p>
+                    <div class="highlight-box">
+                        <p><strong>El reto principal:</strong> Transformar registros dispersos de tickets en indicadores claros de rendimiento (KPIs) mediante scripts de limpieza en Python y visualización analítica en Power BI.</p>
+                    </div>
+                </section>
+
+                <!-- 3. Enfoque y Arquitectura Propuesta -->
+                <section class="project-section">
+                    <h2>02. Enfoque Metodológico y Pipeline</h2>
+                    <p>
+                        Se estructuró un flujo de trabajo para estandarizar las bitácoras operativas, calcular tiempos de respuesta y alimentar modelos de visualización.
+                    </p>
+                    <ul class="solution-list">
+                        <li><strong>Limpieza de Datos con Pandas:</strong> Tratamiento de valores nulos, normalización de fechas y categorización masiva de tipos de incidentes.</li>
+                        <li><strong>Modelado de Métricas:</strong> Cálculo automatizado de tiempos promedio de atención y volumen de incidencias críticas.</li>
+                        <li><strong>Integración con Power BI:</strong> Diseño de tableros ejecutivos enfocados en el rendimiento operativo del área de TI.</li>
+                    </ul>
+
+                    <!-- Estructura técnica proyectada -->
+                    <div class="directory-tree-wrapper">
+                        <div class="code-header">
+                            <span>Estructura del Proyecto Analítico</span>
+                            <span class="code-lang">Architecture</span>
+                        </div>
+                        <pre class="directory-tree"><code>soporte-ti-analytics/
+│
+├── <span class="folder">src/</span>
+│   ├── <span class="file">etl_tickets.py</span>     <span class="comment"># Limpieza, normalización y enmascaramiento de datos</span>
+│   └── <span class="file">metrics.py</span>         <span class="comment"># Cálculo de tiempos de resolución y KPIs</span>
+│
+├── <span class="folder">data/</span>                 <span class="comment"># Registros históricos anonimizados</span>
+├── <span class="folder">powerbi/</span>              <span class="comment"># Modelos y dashboards (.pbix)</span>
+└── <span class="file">main.py</span>               <span class="comment"># Orquestador general del flujo</span></code></pre>
+                    </div>
+                </section>
+
+                <!-- 4. Próximos Entregables -->
+                <section class="project-section">
+                    <h2>03. Resultados Esperados y Dashboards</h2>
+                    <p>
+                        El sistema final facilita la visibilidad del departamento mediante tableros dinámicos que permiten aislar cuellos de botella operativos en segundos.
+                    </p>
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <span class="result-metric">-30%</span>
+                            <p>Tiempo de consolidación de reportes de soporte</p>
+                        </div>
+                        <div class="result-card">
+                            <span class="result-metric">KPIs</span>
+                            <p>Tiempos de respuesta y resolución en tiempo real</p>
+                        </div>
+                        <div class="result-card">
+                            <span class="result-metric">100%</span>
+                            <p>Privacidad y anonimización de datos corporativos</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- CTA de Cierre -->
+            <section class="project-footer-cta">
+                <div class="cta-badge">¿CONVERSEMOS?</div>
+                <h3>¿Te interesa conocer más sobre este análisis de datos de soporte?</h3>
+                <p>Hablemos sobre cómo optimizar la operación de TI y el análisis de métricas en tu organización.</p>
+                <div class="cta-actions">
+                    <a href="../index.html#contacto" class="btn btn-primary">Contactar conmigo →</a>
+                    <a href="../index.html#proyectos" class="btn btn-secondary">Ver otros proyectos</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer__container">
+            <div class="footer__left">
+                <p>&copy; 2026 Adan Josue Salinas Alfonso.</p>
+            </div>
+            <div class="footer__right">
+                <ul class="footer__socials">
+                    <li><a href="https://github.com/AdanAlfonso" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/adan-alfonso/" target="_blank" rel="noopener">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
