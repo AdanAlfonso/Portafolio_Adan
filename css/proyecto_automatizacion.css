@@ -308,6 +308,7 @@ ESTILOS DEL DIAGRAMA DE FLUJO ETL
 .file-badge.excel { background-color: #107c41; color: white; }
 .file-badge.word { background-color: #2b579a; color: white; }
 .file-badge.pdf { background-color: #d32f2f; color: white; }
+.file-badge.png { background-color: #6a4c93; color: white; }
 .py-logo { font-family: var(--font-mono); font-size: 0.85rem; color: #f3c653; }
 
 .etl-label-sub {
@@ -482,6 +483,27 @@ ESTILOS DE LA VISTA PREVIA DE DATOS (DATA SNAPSHOT)
     border: 1px solid rgba(191, 97, 106, 0.3);
 }
 
+/* Semáforo de severidad — mismos colores que config/constantes.py (ESTILOS_SEVERIDAD) */
+.badge-status.critica {
+    background-color: #FF8284;
+    color: #9C0006;
+}
+
+.badge-status.alta {
+    background-color: #D99064;
+    color: #943B00;
+}
+
+.badge-status.media {
+    background-color: #FFEB9C;
+    color: #9C6500;
+}
+
+.badge-status.baja {
+    background-color: #E2EFDA;
+    color: #375623;
+}
+
 /* =========================================================
 ESTILOS DEL CTA DE CIERRE MEJORADO
 ========================================================= */
@@ -614,7 +636,93 @@ MEDIA QUERIES (RESPONSIVE)
         display: none;
     }
 
-    /* Reducir el padding interno de los bloques de código y tablas en móvil */
+/* =========================================================
+GALERÍA DE GRÁFICAS (imágenes reales generadas por el proyecto)
+========================================================= */
+.chart-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.chart-card {
+    background-color: var(--color-graphite);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.chart-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.chart-card__caption {
+    padding: 0.85rem 1rem;
+    font-size: 0.82rem;
+    color: var(--color-slate);
+    line-height: 1.5;
+}
+
+.chart-card__caption strong {
+    color: var(--color-white);
+}
+
+/* =========================================================
+CAPTURA DE APLICACIÓN (marco tipo ventana de escritorio)
+========================================================= */
+.app-window {
+    margin-top: var(--space-xl);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background-color: var(--color-graphite);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.app-window__titlebar {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 0.85rem;
+    background-color: rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.app-window__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.app-window__dot.red { background-color: #ff5f57; }
+.app-window__dot.yellow { background-color: #febc2e; }
+.app-window__dot.green { background-color: #28c840; }
+
+.app-window__title {
+    margin-left: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-slate);
+}
+
+.app-window img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .chart-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Reducir el padding interno de los bloques de código y tablas en móvil */
     .code-block-wrapper pre,
     .data-preview-wrapper {
         padding: 0.5rem;

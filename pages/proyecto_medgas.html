@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mediciones de Gas Natural | Portafolio de Adan Salinas</title>
+    <title>GasVigia — Diagnóstico de Medición de Gas Natural | Portafolio de Adan Salinas</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,10 +30,11 @@
             <!-- 1. Nombre del proyecto y Metadatos -->
             <header class="project-header">
                 <span class="section-label">02 / CASO DE ESTUDIO</span>
-                <h1>Análisis de Mediciones y Consumo de Gas Natural</h1>
+                <h1>GasVigia — Diagnóstico Operativo de Medición de Gas Natural</h1>
                 <p class="project-subtitle">
-                    Desarrollo de herramientas analíticas para la detección de irregularidades y análisis de consumo 
-                    a partir de registros horarios y diarios de mantenimiento industrial.
+                    Aplicación de escritorio en Python que analiza registros horarios (HM) y diarios (DM) de
+                    estaciones de medición de gas natural, detectando automáticamente alarmas, caídas de consumo
+                    y picos atípicos mediante un motor de reglas y análisis estadístico (Z-Score).
                 </p>
 
                 <div class="project-meta">
@@ -41,22 +42,107 @@
                         <span class="meta-label">Tecnologías:</span>
                         <ul class="tag-list">
                             <li>Python</li>
-                            <li>Pandas</li>
-                            <li>Excel / Time-Series</li>
-                            <li>Data Quality</li>
+                            <li>Pandas / NumPy</li>
+                            <li>Matplotlib</li>
+                            <li>CustomTkinter (Escritorio)</li>
+                            <li>Pytest</li>
                         </ul>
                     </div>
                     <div class="meta-group">
-                        <span class="meta-label">Estado:</span>
-                        <span class="repo-link" style="color: #f3c653;">En desarrollo / Blindaje de datos</span>
+                        <span class="meta-label">Repositorio:</span>
+                        <a href="https://github.com/AdanAlfonso/GasVigia" target="_blank" rel="noopener" class="repo-link">Ver en GitHub →</a>
                     </div>
                 </div>
 
-                <!-- Banner de Proyecto en Desarrollo / Datos Sensibles -->
+                <!-- Nota de datos ficticios -->
                 <div class="etl-objective-banner" style="margin-top: var(--space-xl); background-color: rgba(42, 157, 143, 0.05); border-color: rgba(42, 157, 143, 0.3);">
                     <span class="objective-icon">🔒</span>
-                    <p><strong>NOTA TÉCNICA:</strong> Este proyecto procesa registros operativos reales. Actualmente estamos trabajando en los módulos de anonimización y pruebas de estrés para proteger la confidencialidad de la información antes de liberar el repositorio público.</p>
+                    <p><strong>NOTA:</strong> Proyecto completo y repositorio público. Por confidencialidad de la operación industrial de origen, se ejecuta con datos ficticios que replican fielmente la estructura y el comportamiento de los registros reales de un computador de flujo.</p>
                 </div>
+
+                <!-- Diagrama de Flujo del Sistema -->
+                <section class="etl-flow-section">
+                    <h2>Flujo del Sistema</h2>
+                    <p class="etl-intro">Del archivo del computador de flujo al reporte ejecutivo, en tres etapas.</p>
+
+                    <div class="etl-container">
+                        <!-- Paso 1: Entrada y Validación -->
+                        <div class="etl-card">
+                            <div class="etl-step-header">
+                                <span class="etl-badge">1</span>
+                                <h3>Entrada y Validación</h3>
+                            </div>
+                            <p class="etl-step-desc">Registros del Computador de Flujo</p>
+                            <div class="etl-icon-box">
+                                <span class="file-badge excel">XLSX</span>
+                                <span class="etl-label-sub">Hojas HM y DM</span>
+                            </div>
+                            <ul class="etl-list">
+                                <li>Validación de integridad del archivo</li>
+                                <li>Verificación de hojas HM / DM</li>
+                                <li>Validación del esquema de columnas</li>
+                            </ul>
+                        </div>
+
+                        <!-- Flecha de conexión -->
+                        <div class="etl-arrow">→</div>
+
+                        <!-- Paso 2: Motor de Análisis -->
+                        <div class="etl-card etl-highlight">
+                            <div class="etl-step-header">
+                                <span class="etl-badge">2</span>
+                                <h3>Motor de Análisis</h3>
+                            </div>
+                            <p class="etl-step-desc">Reglas de Negocio + Z-Score</p>
+                            <div class="etl-icon-box">
+                                <span class="py-logo">🐍 Python</span>
+                            </div>
+                            <ul class="etl-list">
+                                <li>Normalización de fechas (corrige bug del equipo)</li>
+                                <li>5 reglas de negocio independientes</li>
+                                <li>Detección estadística de anomalías (Z-Score)</li>
+                            </ul>
+                        </div>
+
+                        <!-- Flecha de conexión -->
+                        <div class="etl-arrow">→</div>
+
+                        <!-- Paso 3: Salidas -->
+                        <div class="etl-card">
+                            <div class="etl-step-header">
+                                <span class="etl-badge">3</span>
+                                <h3>Salidas</h3>
+                            </div>
+                            <p class="etl-step-desc">Reporte y Diagnóstico Visual</p>
+                            <div class="etl-icon-box">
+                                <span class="file-badge excel">XLSX</span>
+                                <span class="file-badge png">PNG</span>
+                            </div>
+                            <ul class="etl-list">
+                                <li>Reporte ejecutivo con semáforo de severidad</li>
+                                <li>Gráficas de control estadístico</li>
+                                <li>Interfaz gráfica de escritorio</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Banner de Objetivo -->
+                    <div class="etl-objective-banner">
+                        <span class="objective-icon">🎯</span>
+                        <p><strong>OBJETIVO:</strong> Automatizar el diagnóstico operativo de estaciones de medición, aplicando reglas de negocio y análisis estadístico para entregar un reporte listo para compartir con el equipo de operaciones.</p>
+                    </div>
+
+                    <!-- Captura real de la aplicación -->
+                    <div class="app-window">
+                        <div class="app-window__titlebar">
+                            <span class="app-window__dot red"></span>
+                            <span class="app-window__dot yellow"></span>
+                            <span class="app-window__dot green"></span>
+                            <span class="app-window__title">Sistema de Diagnóstico Operativo — Medición de Gas</span>
+                        </div>
+                        <img src="../assets/gasvigia_ui.png" alt="Interfaz de escritorio de GasVigia construida con CustomTkinter, mostrando selector de archivo, umbral Z-Score ajustable y panel de severidad">
+                    </div>
+                </section>
             </header>
 
             <!-- Separador visual -->
@@ -69,65 +155,186 @@
                 <section class="project-section">
                     <h2>01. Problemática</h2>
                     <p>
-                        Los equipos de mantenimiento industrial manejan volúmenes masivos de registros horarios y diarios en Excel 
-                        para el seguimiento de energéticos. La detección manual de anomalías o picos de consumo atípicos suele ser 
-                        lenta y propensa a pasar por alto patrones ocultos en las series temporales.
+                        Los computadores de flujo de las estaciones de gas exportan archivos Excel con cientos de
+                        registros de presión, temperatura, volumen corregido, alarmas y eventos. Revisar manualmente
+                        esta información para detectar anomalías operativas es lento y propenso a pasar por alto
+                        patrones ocultos en las series de tiempo.
                     </p>
                     <div class="highlight-box">
-                        <p><strong>El reto principal:</strong> Automatizar la lectura y el análisis estadístico de series de tiempo operativas para identificar desviaciones y comportamientos anómalos de manera oportuna.</p>
+                        <p><strong>El reto principal:</strong> Automatizar la lectura y el análisis estadístico de registros horarios y diarios para identificar desviaciones operativas de forma oportuna, entregando un diagnóstico confiable sin intervención manual.</p>
                     </div>
                 </section>
 
-                <!-- 3. Enfoque y Arquitectura Propuesta -->
+                <!-- 3. Solución Propuesta -->
                 <section class="project-section">
-                    <h2>02. Enfoque Metodológico</h2>
+                    <h2>02. Solución Propuesta</h2>
                     <p>
-                        Se diseñó una estructura modular orientada al procesamiento de datos industriales mediante scripts especializados 
-                        en limpieza, validación de esquemas y análisis de tendencias temporales.
+                        Se diseñó una arquitectura por capas inspirada en el enfoque hexagonal, donde cada módulo
+                        tiene una única responsabilidad. El motor de reglas es extensible: cada regla de negocio
+                        vive en su propio archivo y comparte un contrato uniforme, lo que permite agregar nuevas
+                        reglas sin modificar el orquestador central.
                     </p>
                     <ul class="solution-list">
-                        <li><strong>Procesamiento de Series Temporales:</strong> Normalización de marcas de tiempo y manejo de frecuencias horarias y diarias en Pandas.</li>
-                        <li><strong>Detección de Irregularidades:</strong> Algoritmos de umbrales dinámicos para el aislamiento de picos de consumo atípicos.</li>
-                        <li><strong>Arquitectura Modular:</strong> Separación entre la ingesta de datos, los motores de cálculo analítico y los generadores de reportes ejecutivos.</li>
+                        <li><strong>Separación por capas:</strong> modelos, lectura/validación de datos, motor de análisis, generación de reportes y visualización, cada uno desacoplado del resto.</li>
+                        <li><strong>Reglas independientes:</strong> alarmas, picos de eventos, consumo cero y picos atípicos (diarios y horarios), cada una en su propio módulo.</li>
+                        <li><strong>Pruebas unitarias:</strong> 25 pruebas con pytest cubriendo reglas de negocio, validaciones y normalización de fechas.</li>
                     </ul>
-
-                    <!-- Estructura técnica proyectada -->
+                    <!-- Visualización del Árbol de Directorios -->
                     <div class="directory-tree-wrapper">
                         <div class="code-header">
-                            <span>Estructura del Módulo Analítico (En desarrollo)</span>
+                            <span>Estructura del Proyecto</span>
                             <span class="code-lang">Architecture</span>
                         </div>
-                        <pre class="directory-tree"><code>medgas-analitica/
+                        <pre class="directory-tree"><code>GasVigia/
 │
+├── <span class="folder">config/</span>                   <span class="comment"># Rutas, columnas, umbrales y estilos</span>
 ├── <span class="folder">src/</span>
-│   ├── <span class="file">ingest.py</span>         <span class="comment"># Limpieza y normalización de registros Excel</span>
-│   ├── <span class="file">analytics.py</span>      <span class="comment"># Modelos de detección de anomalías</span>
-│   └── <span class="file">reports.py</span>        <span class="comment"># Consolidación de métricas para mantenimiento</span>
+│   ├── <span class="folder">modelos/</span>              <span class="comment"># Estacion, Observacion, Metadatos</span>
+│   ├── <span class="folder">core/</span>                 <span class="comment"># Lectura de Excel y normalización de fechas</span>
+│   ├── <span class="folder">validaciones/</span>         <span class="comment"># Pipeline de validación (3 etapas)</span>
+│   ├── <span class="folder">analisis/</span>
+│   │   ├── <span class="file">motor_analisis.py</span>   <span class="comment"># Orquestador de las 5 reglas</span>
+│   │   └── <span class="folder">reglas/</span>            <span class="comment"># Una regla de negocio por archivo</span>
+│   ├── <span class="folder">reportes/</span>             <span class="comment"># Generador del reporte Excel (openpyxl)</span>
+│   ├── <span class="folder">visualizacion/</span>        <span class="comment"># Gráficas de control (matplotlib)</span>
+│   └── <span class="folder">ui/</span>                   <span class="comment"># Interfaz gráfica (CustomTkinter)</span>
 │
-├── <span class="folder">data/</span>                 <span class="comment"># Registros operativos (Protegidos por anonimización)</span>
-└── <span class="file">main.py</span>               <span class="comment"># Orquestador del pipeline de análisis</span></code></pre>
+├── <span class="folder">tests/</span>                    <span class="comment"># 25 pruebas unitarias (pytest)</span>
+└── <span class="file">requirements.txt</span></code></pre>
                     </div>
                 </section>
 
-                <!-- 4. Próximos Entregables -->
+                <!-- 4. Implementación y Control de Calidad -->
                 <section class="project-section">
-                    <h2>03. Próximos Entregables y Resultados Esperados</h2>
+                    <h2>03. Implementación: un bug real del equipo de medición</h2>
                     <p>
-                        Con la finalización de este desarrollo, el sistema proveerá tableros de diagnóstico automatizados y reportes 
-                        de excepciones para agilizar las decisiones del área operativa.
+                        Durante el análisis de los registros se detectó una inconsistencia real del computador de
+                        flujo: para los primeros doce días de cada mes, el equipo invierte día y mes en las fechas
+                        almacenadas como tipo <code>DATE</code>. Sin corregirlo, cualquier análisis de series de
+                        tiempo quedaría desalineado justo en ese rango de fechas.
                     </p>
-                    <div class="results-grid">
+
+                    <!-- Bloque de Código Clave -->
+                    <div class="code-block-wrapper">
+                        <div class="code-header">
+                            <span>src/core/normalizador_fechas.py (Corrección de Fechas)</span>
+                            <span class="code-lang">Python</span>
+                        </div>
+                        <pre><code>def _normalizar_fecha_excel(valor: datetime) -> datetime:
+    """
+    Corrige fechas almacenadas como tipo DATE.
+
+    El computador de flujo invierte día y mes para
+    los primeros doce días del mes.
+
+    Ejemplo:
+        Valor almacenado:  2024-12-10
+        Valor corregido:   2024-10-12
+    """
+    # Si alguno de los valores es mayor a 12,
+    # no existe posibilidad de inversión.
+    if valor.day > 12 or valor.month > 12:
+        return valor
+
+    return valor.replace(month=valor.day, day=valor.month)</code></pre>
+                    </div>
+
+                    <p style="margin-top: var(--space-lg);">
+                        Con las fechas ya normalizadas, el motor de análisis ejecuta las 5 reglas de negocio sobre
+                        cada estación y clasifica cada hallazgo por severidad, el mismo semáforo de colores que se
+                        incrusta en el reporte Excel final:
+                    </p>
+
+                    <!-- Tabla Analítica -->
+                    <div class="data-preview-wrapper">
+                        <div class="code-header">
+                            <span>Salida del Motor de Análisis (Ejemplo Ilustrativo)</span>
+                            <span class="code-lang">Pandas / Reglas de Negocio</span>
+                        </div>
+                        <div class="table-container">
+                            <table class="analytics-table">
+                                <thead>
+                                    <tr>
+                                        <th>Regla</th>
+                                        <th>Hoja</th>
+                                        <th>Severidad</th>
+                                        <th>Resultado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>Alarmas en sitio</code></td>
+                                        <td>HM</td>
+                                        <td><span class="badge-status critica">CRÍTICA</span></td>
+                                        <td class="metric-val">3 observaciones</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>Consumo Cero</code></td>
+                                        <td>HM</td>
+                                        <td><span class="badge-status alta">ALTA</span></td>
+                                        <td class="metric-val">1 observación</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>Picos Atípicos (DM)</code></td>
+                                        <td>DM</td>
+                                        <td><span class="badge-status alta">ALTA</span></td>
+                                        <td class="metric-val">2 observaciones</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>Picos de Eventos</code></td>
+                                        <td>DM</td>
+                                        <td><span class="badge-status media">MEDIA</span></td>
+                                        <td class="metric-val">5 observaciones</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>Registro Duplicado</code></td>
+                                        <td>DM</td>
+                                        <td><span class="badge-status baja">BAJA</span></td>
+                                        <td class="text-muted"><em>1 observación</em></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. Resultados -->
+                <section class="project-section">
+                    <h2>04. Resultados e Impacto</h2>
+                    <p>
+                        El sistema entrega un diagnóstico operativo completo sin intervención manual: desde la
+                        lectura del Excel crudo hasta un reporte ejecutivo con gráficas incrustadas, ejecutable
+                        desde una interfaz de escritorio pensada para personal no técnico.
+                    </p>
+
+                    <!-- Gráficas reales generadas por el proyecto -->
+                    <div class="chart-gallery">
+                        <div class="chart-card">
+                            <img src="../assets/gasvigia_grafica_dm.png" alt="Gráfica de control de consumo diario (DM) con banda de tolerancia y un pico atípico detectado el 12 de octubre">
+                            <div class="chart-card__caption">
+                                <strong>Consumo Diario (DM).</strong> Banda de tolerancia ±3σ sobre la línea base; el pico del 12 de octubre queda claramente fuera de rango.
+                            </div>
+                        </div>
+                        <div class="chart-card">
+                            <img src="../assets/gasvigia_grafica_hm.png" alt="Gráfica de control de consumo horario (HM) con dos picos atípicos marcados en naranja">
+                            <div class="chart-card__caption">
+                                <strong>Consumo Horario (HM).</strong> El motor marca automáticamente cada pico atípico (puntos naranjas) sobre el umbral Z-Score configurado.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="results-grid" style="margin-top: var(--space-xl);">
                         <div class="result-card">
-                            <span class="result-metric">Automático</span>
-                            <p>Procesamiento de reportes horarios y diarios</p>
+                            <span class="result-metric">5</span>
+                            <p>Reglas de negocio automatizadas e independientes</p>
                         </div>
                         <div class="result-card">
-                            <span class="result-metric">Preciso</span>
-                            <p>Aislamiento de anomalías de consumo</p>
+                            <span class="result-metric">25</span>
+                            <p>Pruebas unitarias (pytest) sobre reglas y validaciones</p>
                         </div>
                         <div class="result-card">
-                            <span class="result-metric">Seguro</span>
-                            <p>Cumplimiento estricto de privacidad industrial</p>
+                            <span class="result-metric">Z-Score</span>
+                            <p>Detección estadística de picos, no umbrales fijos</p>
                         </div>
                     </div>
                 </section>
@@ -137,11 +344,11 @@
             <!-- CTA de Cierre -->
             <section class="project-footer-cta">
                 <div class="cta-badge">¿CONVERSEMOS?</div>
-                <h3>¿Te interesa conocer más sobre este desarrollo analítico?</h3>
-                <p>Hablemos sobre cómo aplicar ingeniería de datos y análisis de series temporales en tus proyectos.</p>
+                <h3>¿Te interesa llevar este nivel de diagnóstico automatizado a tu operación?</h3>
+                <p>Estoy listo para aportar valor analítico y técnico en proyectos de datos. ¡Hablemos!</p>
                 <div class="cta-actions">
                     <a href="../index.html#contacto" class="btn btn-primary">Contactar conmigo →</a>
-                    <a href="../index.html#proyectos" class="btn btn-secondary">Ver otros proyectos</a>
+                    <a href="https://github.com/AdanAlfonso/GasVigia" target="_blank" rel="noopener" class="btn btn-secondary">Ver código en GitHub</a>
                 </div>
             </section>
         </div>
