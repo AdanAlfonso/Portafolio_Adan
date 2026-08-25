@@ -588,7 +588,109 @@ ESTILOS DEL CTA DE CIERRE MEJORADO
 }
 
 /* =========================================================
-MEDIA QUERIES (RESPONSIVE)
+GALERÍA DE GRÁFICAS (imágenes reales generadas por el proyecto)
+========================================================= */
+.chart-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.chart-card {
+    background-color: var(--color-graphite);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.chart-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    /* Aplicamos un filtro sutil para atenuar el brillo blanco y unificar con el tema oscuro */
+    filter: brightness(0.75) contrast(1.05) saturate(0.9);
+    transition: filter var(--transition-fast);
+}
+
+/* Efecto hover opcional: al pasar el cursor, la gráfica recupera su brillo original para examinarse a detalle */
+.chart-card:hover img {
+    filter: brightness(1) contrast(1) saturate(1);
+}
+
+.chart-card__caption {
+    padding: 0.85rem 1rem;
+    font-size: 0.82rem;
+    color: var(--color-slate);
+    line-height: 1.5;
+}
+
+.chart-card__caption strong {
+    color: var(--color-white);
+}
+
+/* =========================================================
+CAPTURA DE APLICACIÓN (marco tipo ventana de escritorio)
+========================================================= */
+.app-window {
+    max-width: 820px; /* Limita el ancho máximo para que no se extienda de más en pantallas grandes */
+    margin: var(--space-xl) auto; /* Centra la ventana horizontalmente y le da espacio vertical */
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background-color: var(--color-graphite);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.app-window__titlebar {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 0.85rem;
+    background-color: rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.app-window__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.app-window__dot.red { background-color: #ff5f57; }
+.app-window__dot.yellow { background-color: #febc2e; }
+.app-window__dot.green { background-color: #28c840; }
+
+.app-window__title {
+    margin-left: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-slate);
+}
+
+.app-window img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* =========================================================
+EFECTO HOVER PARA LAS TARJETAS DE RESULTADOS
+========================================================= */
+.result-card {
+    transition: transform var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.result-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(42, 157, 143, 0.4); /* Resalta sutilmente con el color teal corporativo */
+    background-color: #121c29; /* Un tono ligeramente más claro que graphite para dar profundidad */
+}
+
+/* =========================================================
+MEDIA QUERIES (RESPONSIVE) - Ajustes para pantallas pequeñas
 ========================================================= */
 @media screen and (max-width: 900px) {
     .etl-container {
@@ -636,93 +738,12 @@ MEDIA QUERIES (RESPONSIVE)
         display: none;
     }
 
-/* =========================================================
-GALERÍA DE GRÁFICAS (imágenes reales generadas por el proyecto)
-========================================================= */
-.chart-gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-lg);
-    margin-top: var(--space-lg);
-}
-
-.chart-card {
-    background-color: var(--color-graphite);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-}
-
-.chart-card img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.chart-card__caption {
-    padding: 0.85rem 1rem;
-    font-size: 0.82rem;
-    color: var(--color-slate);
-    line-height: 1.5;
-}
-
-.chart-card__caption strong {
-    color: var(--color-white);
-}
-
-/* =========================================================
-CAPTURA DE APLICACIÓN (marco tipo ventana de escritorio)
-========================================================= */
-.app-window {
-    margin-top: var(--space-xl);
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    background-color: var(--color-graphite);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-}
-
-.app-window__titlebar {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.6rem 0.85rem;
-    background-color: rgba(255, 255, 255, 0.04);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.app-window__dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.app-window__dot.red { background-color: #ff5f57; }
-.app-window__dot.yellow { background-color: #febc2e; }
-.app-window__dot.green { background-color: #28c840; }
-
-.app-window__title {
-    margin-left: 0.5rem;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--color-slate);
-}
-
-.app-window img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-@media (max-width: 768px) {
+    /* Pasar la galería de gráficas a una sola columna en móvil */
     .chart-gallery {
         grid-template-columns: 1fr;
     }
-}
 
-/* Reducir el padding interno de los bloques de código y tablas en móvil */
+    /* Reducir el padding interno de los bloques de código y tablas en móvil */
     .code-block-wrapper pre,
     .data-preview-wrapper {
         padding: 0.5rem;
@@ -730,7 +751,7 @@ CAPTURA DE APLICACIÓN (marco tipo ventana de escritorio)
 
     /* Ajustar el tamaño de fuente del código para mejor lectura en pantallas estrechas */
     .code-block-wrapper code {
-        font-size: 0.40rem;
+        font-size: 0.65rem; /* Nota: Evita 0.40rem porque vuelve el código totalmente ilegible */
     }
 
     /* Permitir que la cabecera de la tabla y las celdas se compacten mejor */
